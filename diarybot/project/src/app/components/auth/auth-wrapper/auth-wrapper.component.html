@@ -1,0 +1,13 @@
+<div class="auth-container">
+  <div class="auth-box">
+    <h2>{{ isLogin ? 'Login' : 'Register' }}</h2>
+    <app-login *ngIf="isLogin"></app-login>
+    <app-register *ngIf="!isLogin"></app-register>
+    <p class="toggle-text">
+      {{ isLogin ? 'Don\'t have an account?' : 'Already have an account?' }}
+      <button (click)="toggleView()">
+        {{ isLogin ? 'Register' : 'Login' }}
+      </button>
+    </p>
+  </div>
+</div>
